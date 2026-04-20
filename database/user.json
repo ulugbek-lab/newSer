@@ -1,0 +1,20 @@
+{
+  "name": "Chris",
+  "profession": "Software engineer",
+  "age ": "22",
+  "residence": "S.Korea",
+  "address": "S.Korea, Busan",
+  "language": ["uzbek", "Tadjik", "korean", "english"],
+  "skills": ["html", "css", "js", "node.js", "python"],
+  "extra-skills": ["bootstrap", "mangodb", "sass", "django", "flask"],
+  "work_place": "LG",
+  "service_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+  "about_me": "Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+  "city": "tashkent",
+  "title": "flower",
+  "flower_desc": ["dead flower"],
+  "flower_name": ["tulip"],
+  "flower_price": ["123", "321", "23"],
+  "famous_words": ["world is pretty"],
+  "famous_name": ["chris james"]
+}
