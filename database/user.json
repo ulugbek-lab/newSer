@@ -1,10 +1,10 @@
 {
   "name": "Chris",
-  "profession": "Software engineer",
-  "age ": "22",
+  "profession": " Engineer",
+  "age": "22",
   "residence": "S.Korea",
   "address": "S.Korea, Busan",
-  "language": ["uzbek", "Tadjik", "korean", "english"],
+  "language": ["uzbek", "korean", "english"],
   "skills": ["html", "css", "js", "node.js", "python"],
   "extra-skills": ["bootstrap", "mangodb", "sass", "django", "flask"],
   "work_place": "LG",
