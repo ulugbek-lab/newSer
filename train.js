@@ -1,15 +1,34 @@
-//MIT TASK A
 
-function countLetter(letter, word) {
-  let count = 0;
-  for (let i = 0; i < word.length; i++) {
-    if (word[i] === letter) {
-      count += 1;
+//MIT TASK B
+function countNumber(string) {
+  let count = 0 
+  for(let i = 0; i < string.length; i++) {
+    if(string[i] >= '0' && string[i] <= '9') {
+      count += 1
     }
   }
-  return count;
+  return count
 }
-console.log(countLetter("o", "football"));
+console.log(countNumber("jioseyf093275iojqwd"))
+
+//MIT TASK A
+
+// function countLetter(letter, word) {
+//   let count = 0;
+//   for (let i = 0; i < word.length; i++) {
+//     if (word[i] === letter) {
+//       count += 1;
+//     }
+//   }
+//   return count;
+// }
+// console.log(countLetter("o", "football"));
+
+
+
+
+
+
 
 // const { resolveInclude } = require("ejs");
 
