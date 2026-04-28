@@ -6,7 +6,7 @@ const fs = require("fs");
 
 //Mongo db call
 
-const db = require("./server").db()
+const db = require("./server").db();
 let user;
 
 fs.readFile("database/user.json", "utf8", (err, data) => {
@@ -30,15 +30,34 @@ app.set("view engine", "ejs");
 
 //4:Routing codes
 app.post("/create-item", (req, res) => {
-  // console.log(req.body);
-  // res.json({ test: "success" });
+  console.log("user entered /create-item");
+  console.log(req.body);
+  const new_reja = req.body.reja;
+  db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.send("smth went wrong");
+    } else {
+      res.end("successfully added");
+    }
+  });
   //TODO: code with db here
 });
-app.get("/author", (req, res) => {
-  res.render("author", { user: user });
-});
+// app.get("/author", (req, res) => {
+//   res.render("author", { user: user });
+// });
 app.get("/", function (req, res) {
-  res.render("reja");
+  console.log("user entered /");
+  db.collection("plans")
+    .find()
+    .toArray((err, data) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log(data);
+        res.render("reja", { items: data });
+      }
+    });
 });
 
 module.exports = app;
