@@ -22,7 +22,7 @@ mongodb.connect(
       let PORT = 3000;
       server.listen(PORT, function () {
         console.log(
-          `server is running on PORT, ${PORT}, http://localhost:${PORT}`,
+          `server is running on PORT ${PORT}, http://localhost:${PORT}`,
         );
       });
     }

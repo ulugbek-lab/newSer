@@ -1,7 +1,7 @@
 console.log("server is running");
 const express = require("express");
 const app = express();
-const http = require("http");
+// const http = require("http");
 const fs = require("fs");
 
 //Mongo db call
@@ -30,16 +30,12 @@ app.set("view engine", "ejs");
 
 //4:Routing codes
 app.post("/create-item", (req, res) => {
-  console.log("user entered /create-item");
-  console.log(req.body);
+  // console.log("user entered /create-item");
+  // console.log(req.body);
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-    if (err) {
-      console.log(err);
-      res.send("smth went wrong");
-    } else {
-      res.end("successfully added");
-    }
+    console.log(data.ops);
+    res.json(data.ops[0]);
   });
   //TODO: code with db here
 });
@@ -47,14 +43,14 @@ app.post("/create-item", (req, res) => {
 //   res.render("author", { user: user });
 // });
 app.get("/", function (req, res) {
-  console.log("user entered /");
+  // console.log("user entered /");
   db.collection("plans")
     .find()
     .toArray((err, data) => {
       if (err) {
         console.log(err);
       } else {
-        console.log(data);
+        // console.log(data);
         res.render("reja", { items: data });
       }
     });

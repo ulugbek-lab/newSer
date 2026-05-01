@@ -1,15 +1,15 @@
 
-//MIT TASK B
-function countNumber(string) {
-  let count = 0 
-  for(let i = 0; i < string.length; i++) {
-    if(string[i] >= '0' && string[i] <= '9') {
-      count += 1
-    }
-  }
-  return count
-}
-console.log(countNumber("jioseyf093275iojqwd"))
+// //MIT TASK B
+// function countNumber(string) {
+//   let count = 0 
+//   for(let i = 0; i < string.length; i++) {
+//     if(string[i] >= '0' && string[i] <= '9') {
+//       count += 1
+//     }
+//   }
+//   return count
+// }
+// console.log(countNumber("jioseyf093275iojqwd"))
 
 //MIT TASK A
 
@@ -34,35 +34,35 @@ console.log(countNumber("jioseyf093275iojqwd"))
 
 //CALLBACK
 
-// const list = [
-//   "bee a good student", //0-20
-//   "make me proud", //20-30
-//   "keep pushing", //30-40
-//   "give back to society", //40-50
-//   "rest now", //50-60
-//   "sleep now ", //60
-// ];
-// function giveAdvice(a, callback) {
-//   if (typeof a !== "number") callback("pls write a number", null);
-//   else if (a <= 20) callback(null, list[0]);
-//   else if (a > 20 && a <= 30) callback(null, list[1]);
-//   else if (a > 30 && a <= 40) callback(null, list[2]);
-//   else if (a > 40 && a <= 50) callback(null, list[3]);
-//   else if (a > 50 && a <= 60) callback(null, list[4]);
-//   else {
-//     setTimeout(() => {
-//       callback(null, list[5]);
-//     }, 5000);
-//   }
-// }
-// console.log("passed here 0");
-// giveAdvice(55, (err, data) => {
-//   if (err) console.log("ERROR:", err);
-//   else {
-//     console.log(data);
-//   }
-// });
-// console.log("passed here 1");
+const list = [
+  "bee a good student", //0-20
+  "make me proud", //20-30
+  "keep pushing", //30-40
+  "give back to society", //40-50
+  "rest now", //50-60
+  "sleep now ", //60
+];
+function giveAdvice(a, callback) {
+  if (typeof a !== "number") callback("pls write a number", null);
+  else if (a <= 20) callback(null, list[0]);
+  else if (a > 20 && a <= 30) callback(null, list[1]);
+  else if (a > 30 && a <= 40) callback(null, list[2]);
+  else if (a > 40 && a <= 50) callback(null, list[3]);
+  else if (a > 50 && a <= 60) callback(null, list[4]);
+  else {
+    setTimeout(() => {
+      callback(null, list[5]);
+    }, 5000);
+  }
+}
+console.log("passed here 0");
+giveAdvice(55, (err, data) => {
+  if (err) console.log("ERROR:", err);
+  else {
+    console.log(data);
+  }
+});
+console.log("passed here 1");
 
 //ASYNC/AWAIT FUNCTION
 
