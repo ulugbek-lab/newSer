@@ -1,3 +1,5 @@
+// const { response } = require("../app");
+
 console.log("Frontend js is running here");
 
 function itemTemplate(item) {
@@ -35,4 +37,26 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     .catch((err) => {
       console.log("try again!");
     });
+});
+
+document.addEventListener("click", function (e) {
+  //delete operations
+  console.log(e.target);
+  if (e.target.classList.contains("delete-me")) {
+    if (confirm("Are you sure to delete")) {
+      axios
+        .post("/delete-item", { id: e.target.getAttribute("data-id") })
+        .then((response) => {
+          console.log(response.data);
+          e.target.parentElement.parentElement.remove();
+        })
+        .catch((err) => {
+          console.log("pls try again");
+        });
+    }
+  }
+  //edit operations
+  if (e.target.classList.contains("edit-me")) {
+    alert("are u sure to edit");
+  }
 });
